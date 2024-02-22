@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <title>Erste Website NK</title>
+    <script>
+      function clickCounter() {
+        if (typeof(Storage) !== "undefined") {
+          if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount)+1;
+          } else {
+            localStorage.clickcount = 1;
+          }
+          document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+        } else {
+          document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+        }
+      }
+      </script>
+  </head>
+  <body>
+    <header> 
+      First Website
+    </header>
+    <h1 class="center">Axolotl Fan Website</h1>
+      <p class="center">This a website about Axolotl and my test site</p>
+    <h2 class="center">Facts about Axolotl</h2>
+    <div style="display: flex; align-items: center;">
+      <picture>
+          
+          <img class="two" src="axolotl--a482159219.jpg" alt="Lotl" width="600" height="600" >
+          <p>Picture form <a href="https://www.geo.de/natur/tierwelt/axolotls-koennen-ihre-gehirne-wiederherstellen---32687300.html">https://www.geo.de/natur/tierwelt/axolotls-koennen-ihre-gehirne-wiederherstellen---32687300.html</a></p>
+      </picture>
+      <ul style="margin-left: 20px;">
+        <li>Appearance: Axolotls have a unique appearance, characterized by their external gills, which resemble a frilly crown around their heads, and their feathery external gills, which they use for respiration. They come in various colors, including black, gray, brown, and albino, with pinkish hues.</li>
+        <li>Regenerative Abilities: One of the most remarkable features of axolotls is their remarkable ability to regenerate lost body parts. They can regrow limbs, parts of their brain, spinal cord, and even parts of their heart and other organs.</li>
+        <li>Aquatic Habitat: Unlike other amphibians, axolotls are permanently aquatic and do not undergo metamorphosis to develop lungs and move onto land. They spend their entire lives underwater, typically in freshwater habitats.</li>
+        <li>Status: Axolotls are considered critically endangered in the wild due to habitat destruction, pollution, and the introduction of non-native species. They are also commonly kept as pets and used extensively in scientific research due to their regenerative abilities.</li>
+        <li>Feeding Habits: Axolotls are carnivorous and primarily feed on small prey such as worms, insects, small fish, and crustaceans. They are adept hunters, using a suction-feeding method to capture their prey.</li>
+        <li>Cultural Significance: Axolotls have significance in Mexican culture and mythology, often associated with various gods and considered a symbol of transformation and renewal.</li>
+        <li>Conservation Efforts: Efforts are underway to conserve wild populations of axolotls, including habitat restoration projects and captive breeding programs. Additionally, there is ongoing research into understanding their regenerative abilities, which may have implications for regenerative medicine and tissue engineering in humans.</li>
+        <li>Text created by ChatGPT</li>
+      </ul>
+  </div>  
+    <div class="center">
+      <p class="center">Is this Axolotl above cute? Click the button</p>
+      <button class="btn cute center" onclick=" alert('Yes, he is cute :&#41;')">Yes</button>
+      <button class="btn cute center" onclick=" alert('Why do you hate him :&#40;')">No</button>
+      <p><button class="btn cute" onclick="clickCounter()" type="button">Click Counter</button></p>
+      <div id="result"></div>
+    </div>
+
+
+
+    <h2 style="padding-left: 30px;">Another Axolotl</h2>
+    <picture>
+      <img class="two" src="axolotlPic2.png" alt="Lotl" width="600" height="600" >
+  </picture>
+      <p>picture from <a href="https://www.lpzoo.org/axolotls-endangered/">https://www.lpzoo.org/axolotls-endangered/</a></p>   
+
+
+    <h2 style="font-style: italic;">The Form</h2>
+    <h3>Submit your e-mail for more facts about axolotl</h3>
+
+    <form>
+      <label for="mail">Your E-mail</label><br>
+      <input type="text"><br>
+
+      <label for="facts">How many daily facts do you want to have?</label><br>
+    
+      <input type="radio" id="oneFact" name="facts" value="oneFact">
+      <label for="oneFact">One daily fact</label>
+
+      <input type="radio" id="twoFact" name="facts" value="twoFact">
+      <label for="twoFact">Two daily facts</label>
+
+      <input type="radio" id="threeFact" name="facts" value="threeFact">
+      <label for="threeFact">Three daily facts</label><br>
+
+      <label>What kind of facts do you want?</label><br>
+
+      <input type="checkbox" id="factability" name="factability" value="ability">
+      <label for="factability"> I want facts about the ability of axolotls</label><br>
+
+      <input type="checkbox" id="factpicture" name="factpicture" value="picture">
+      <label for="factpicture"> I want pictures from axolotls</label><br>
+
+      <input type="checkbox" id="factconservation" name="factconservation" value="conservation">
+      <label for="factconservation">I want mor facts about the conservation efforts for axolotls</label><br>
+
+      <input type="submit" value="Submit">
+    </form>
+    <footer>
+      <p>Niklaus Koch</p>
+      
+    </footer> 
+  </body>
+</html>
